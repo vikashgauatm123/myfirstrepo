@@ -1,3 +1,3 @@
 # myfirstrepo
-I made this repo for Practice github...
-Author: Vikas Gautam
+I made this repo for Practice github... <br>
+Author - Vikas Gautam
