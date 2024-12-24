@@ -1,2 +1,3 @@
 # myfirstrepo
-for learning
+I made this repo for Practice github...
+Author: Vikas Gautam
