@@ -1,1 +1,301 @@
-<p>vikash Gautam</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gadget Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e3f6ff;
+    }
+
+   
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #4099b7;
+      position: fixed;
+      width: 100%;
+    }
+
+    .nav img {
+      max-width: 80px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      font-weight: 600;
+    }
+
+    .nav ul.active {
+      display: flex;
+    }
+
+    .nav ul li {
+      cursor: pointer;
+      transition: color 0.3s;
+      color: white;
+    }
+
+    .nav ul li:hover {
+      color: #e3f6ff;
+    }
+
+    .Search input {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      width: 180px;
+    }
+
+   
+    .hero {
+      text-align: center;
+      background: linear-gradient(white, #7ec3eb);
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      background-color: aqua;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: darkblue;
+      color: white;
+      transform: scale(1.1);
+    }
+
+  
+    .cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card p {
+      margin: 10px;
+    }
+
+    .card button {
+      margin-bottom: 15px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #57c4f7;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #18d697;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #18668b;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: row;
+        gap: 10px;
+        position: relative;
+      }
+
+      .nav-right {
+        order: 2;
+        display: flex;
+        align-items: center;
+      }
+
+      .hamburger {
+        display: flex;
+        order: 3;
+      }
+
+      .Search {
+        order: 2;
+      }
+
+      .nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #4099b7;
+        padding: 20px;
+        z-index: 1000;
+        margin: 0;
+      }
+
+      .nav ul.active {
+        display: flex;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      #navMenu{background-color: black;
+        opacity: 0.8;
+    } }
+  </style>
+</head>
+<body>
+
+ 
+  <header>
+    <div class="nav">
+      <img src="logo.png" alt="Logo" />
+      <div class="nav-right">
+        <div class="Search">
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <ul id="navMenu">
+        <li>Home</li>
+        <li>Features</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+
+   
+    <div class="hero">
+      <h1>Festive Sale Live!</h1>
+      <p>Get Reliable and Affordable Gadgets!</p>
+      <button>Shop Now!</button>
+    </div>
+  </header>
+
+ 
+  <main>
+    <div class="cards">
+      <div class="card">
+        <img src="Watch.jpeg" alt="Smart Watch">
+        <p><strong>Price:</strong> ₹1,990</p>
+        <p>Calling, 200mAh Battery</p>
+        <button>Shop Now</button>
+      </div>
+
+      <div class="card">
+        <img src="airbuds.webp" alt="Airbuds">
+        <p><strong>Price:</strong> ₹1,990</p>
+        <p>Fast Latency, 250mAh Battery</p>
+        <button>Shop Now</button>
+      </div>
+
+      <div class="card">
+        <img src="wireless speaker.jpg" alt="Wireless Speaker">
+        <p><strong>Price:</strong> ₹1,299</p>
+        <p>High Bass, 5000mAh Battery</p>
+        <button>Shop Now</button>
+      </div>
+    </div>
+  </main>
+
+ 
+  <footer>
+    <div class="footer">
+      © All Rights Reserved 2025
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
